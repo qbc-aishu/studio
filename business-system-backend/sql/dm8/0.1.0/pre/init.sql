@@ -1,4 +1,4 @@
-SET SCHEMA model_management;
+SET SCHEMA adp;
 
 CREATE TABLE if not exists t_business_domain (
     id BIGINT  not null IDENTITY(1, 1),

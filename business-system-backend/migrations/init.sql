@@ -1,4 +1,4 @@
-USE model_management;
+USE adp;
 
 create table if not exists t_business_domain (
     id bigint(20) unsigned not null auto_increment,

@@ -1,5 +1,5 @@
 
-SET SEARCH_PATH TO model_management;
+SET SEARCH_PATH TO adp;
 
 
 CREATE TABLE if not exists t_business_domain (

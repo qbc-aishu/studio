@@ -34,7 +34,7 @@ target "image" {
     dockerfile = "docker/Dockerfile.service"
     target = "result"
     tags = [
-        "${REGISTRY}/ict/business-system-backend:${TAG}"
+        "${REGISTRY}/dip/business-system-backend:${TAG}"
     ]
     args = {
         DEVOPS_PAT = "${DEVOPS_PAT}"
@@ -59,15 +59,12 @@ target "opensource-image" {
     dockerfile = "docker/opensource.dockerfile"
     target = "image-result"
     tags = [
-        "${REGISTRY}/ict/business-system-backend:${VERSION}"
+        "${REGISTRY}/dip/business-system-backend:${VERSION}"
     ]
 }
 target "opensource-chart" {
     dockerfile = "docker/opensource.dockerfile"
     target = "chart-result"
-    tags = [
-        "${REGISTRY}/ict/business-system-backend:${VERSION}"
-    ]
     output = [ "result/chart" ]
 }
 

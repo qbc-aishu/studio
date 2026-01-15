@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   registry: acr.aishu.cn
-  repository: ict/business-system-backend
+  repository: dip/business-system-backend
   tag: <todo>
   pullPolicy: IfNotPresent
 

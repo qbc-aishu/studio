@@ -1,4 +1,9 @@
 FROM acr.aishu.cn/public/ubuntu:22.04.20251014 as runtime
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 FROM scratch as mqsdk
 COPY --from=runtime /usr/lib/libtlq* /
 COPY --from=runtime /usr/lib/libbesmq* /

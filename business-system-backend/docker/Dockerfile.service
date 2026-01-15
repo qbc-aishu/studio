@@ -30,7 +30,7 @@ RUN --mount=type=bind,target=/app,readwrite \
     go tool cover -func=coverage.out
 
 
-FROM acr.aishu.cn/public/ubuntu:22.04.20251014 as result
+FROM runtime as result
 ENV TZ=Asia/Shanghai LANG=en_US.UTF-8
 COPY --from=builder /build-result /app
 WORKDIR /app
